@@ -17,8 +17,11 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin: [process.env.FRONTEND_URL ,'http://localhost:5173'],
-    credentials:true
+    origin: [
+        'https://job-portal-beige-eight.vercel.app',  // Your exact Vercel URL
+        'http://localhost:5173'                        // For local dev
+    ],
+    credentials: true
 }
 
 app.use(cors(corsOptions));

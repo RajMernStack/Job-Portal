@@ -7,7 +7,7 @@ import cloudinary from "../utils/cloudinary.js";
 export const register = async (req, res) => {
     try {
         const { fullname, email, phoneNumber, password, role } = req.body;
-         
+        const isProduction = process.env.NODE_ENV === 'production';
         if (!fullname || !email || !phoneNumber || !password || !role) {
             return res.status(400).json({
                 message: "Something is missing",
@@ -49,7 +49,7 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
     try {
         const { email, password, role } = req.body;
-        
+        const isProduction = process.env.NODE_ENV === 'production';
         if (!email || !password || !role) {
             return res.status(400).json({
                 message: "Something is missing",
@@ -92,7 +92,8 @@ export const login = async (req, res) => {
             profile: user.profile
         }
 
-        return res.status(200).cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpsOnly: true, sameSite: isProduction ? 'none' : 'strict', secure: isProduction }).json({
+        return res.status(200).cookie("token", token, 
+            { maxAge: 1 * 24 * 60 * 60 * 1000, httpOnly: true, sameSite: isProduction ? 'none' : 'lax' , secure: isProduction }).json({
             message: `Welcome back ${user.fullname}`,
             user,
             success: true
@@ -103,7 +104,8 @@ export const login = async (req, res) => {
 }
 export const logout = async (req, res) => {
     try {
-        return res.status(200).cookie("token", "", { maxAge: 0,httpsOnly: true, sameSite: isProduction ? 'none' : 'strict', secure: isProduction }).json({
+        const isProduction = process.env.NODE_ENV === 'production';
+        return res.status(200).cookie("token", "", { maxAge: 0,httpOnly: true, sameSite: isProduction ? 'none' : 'lax', secure: isProduction }).json({
             message: "Logged out successfully.",
             success: true
         })
