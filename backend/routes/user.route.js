@@ -10,5 +10,8 @@ router.route("/login").post(login);
 router.route("/logout").get(logout);
 router.route("/profile/update").post(isAuthenticated,singleUpload,updateProfile);
 
+router.route("/test").get((req, res) => {
+  res.json({ success: true, message: "User route working" })
+})
 export default router;
 
