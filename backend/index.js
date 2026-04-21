@@ -40,6 +40,9 @@ app.get("/api/v1/user/test", (req, res) => {
   })
 })
 
+app.get("/", (req, res) => {
+  res.send({ message: "Welcome to the Job Portal API" })
+})
 app.listen(PORT,()=>{
     connectDB();
     console.log(`Server running at port ${PORT}`);
