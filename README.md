@@ -175,7 +175,7 @@ cd Job-Portal
 <img width="1913" height="899" alt="Screenshot 2026-04-21 022701" src="https://github.com/user-attachments/assets/8e299ae4-a570-4e17-956a-3f2e0f0ea696" />
 
 <img width="1883" height="847" alt="Screenshot 2026-04-21 024759" src="https://github.com/user-attachments/assets/c3a2ad90-9846-4540-9bfe-5a3aedbe2c84" />
-<img width="1880" height="897" alt="Screenshot 2026-04-21 024648" src="https://github.com/user-attachments/assets/ed5f636b-a813-432e-abd6-6a0288ff595b" />
+<img width="1913" height="875" alt="Screenshot 2026-04-21 142632" src="https://github.com/user-attachments/assets/bd310b95-9757-472f-8780-9879e2772bc4" />
 <img width="1858" height="878" alt="Screenshot 2026-04-21 024824" src="https://github.com/user-attachments/assets/e028617e-fe1d-4a1a-bf12-98f5632a96dd" />
 <img width="1887" height="903" alt="Screenshot 2026-04-21 022757" src="https://github.com/user-attachments/assets/08a6501f-b3dc-4880-b460-7d7bb7c75d26" />
 <img width="1912" height="877" alt="Screenshot 2026-04-21 022721" src="https://github.com/user-attachments/assets/b76136d2-b5b6-40cd-8caf-22bbb349431a" />
