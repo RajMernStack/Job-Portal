@@ -30,7 +30,7 @@ const Login = () => {
         e.preventDefault();
         try {
             dispatch(setLoading(true));
-            const res = await axios.post(`${USER_API_END_POINT}/login`, input, {
+            const res = await axios.post('/user/login', input, {
                 headers: {
                     "Content-Type": "application/json"
                 },
@@ -43,7 +43,7 @@ const Login = () => {
             }
         } catch (error) {
             console.log(error);
-            toast.error(error.response.data.message);
+            toast.error(error.response?.data?.message || "login failed.Check if backend is running");
         } finally {
             dispatch(setLoading(false));
         }
